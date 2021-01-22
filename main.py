@@ -8,7 +8,7 @@ app=Flask(__name__)
 
 YOUR_CHANNEL_ACCESS_TOKEN = "WXxwsnhHb8dZ9UCl7mgV1vx4js8887TMjYwiDZh+jXLapUOi/7isvtcOmZP9m+prCkf1A4hpCMlBfNaRPTAiCzid+mPvNMhcpnfHPHz98cxR2bTTJCjghADZnyk7JOjWFYJVC14reFW39QdF6p607gdB04t89/1O/w1cDnyilFU="
 YOUR_CHANNEL_SECRET = "U51f48c4a84fe544502cf3f944737c16e"
-line-bot-api=LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
+line_bot_api=LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler=WebhookHandler(YOUR_CHANNEL_SECRET)
 
 @app.route("/callback",method=["POST"])
@@ -22,7 +22,7 @@ def callback():
         handler.handle(body,signature)
 
     except InvalidSignatureError:
-        abort(400)
+        abort(200)
     return "OK"
 
 @handler.add(MessageEvent,message=TextMessage)

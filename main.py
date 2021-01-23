@@ -6,6 +6,7 @@ from linebot.models import MessageEvent,TextMessage,TextSendMessage
 import os
 
 app=Flask(__name__)
+app.debug = False
 LOG = create_logger(app)
 
 YOUR_CHANNEL_ACCESS_TOKEN = "WXxwsnhHb8dZ9UCl7mgV1vx4js8887TMjYwiDZh+jXLapUOi/7isvtcOmZP9m+prCkf1A4hpCMlBfNaRPTAiCzid+mPvNMhcpnfHPHz98cxR2bTTJCjghADZnyk7JOjWFYJVC14reFW39QdF6p607gdB04t89/1O/w1cDnyilFU="

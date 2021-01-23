@@ -22,7 +22,7 @@ def hello_world():
 @app.route("/callback", methods=['POST','GET'])
 def callback():
     if request.method == 'POST':
-        return "jjj"
+        print("post")
     
     if request.method == 'GET':
         return "now get"

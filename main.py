@@ -19,7 +19,7 @@ def hello_world():
     print("hello")
     return "hello world!!!"
 
-@app.route("/callback", methods=['POST'])
+@app.route("/callback", methods=['POST','GET'])
 def callback():
     if request.method == 'POST':
         # リクエストヘッダーから署名検証のための値を取得
@@ -36,6 +36,9 @@ def callback():
             print("Invalid signature. Please check your channel access token/channel secret.")
             abort(400)
         return 'OK'
+    
+    if request.method == 'GET':
+        return "now get"
 
 @handler.add(MessageEvent,message=TextMessage)
 def handle_message(event):

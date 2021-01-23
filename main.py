@@ -22,20 +22,7 @@ def hello_world():
 @app.route("/callback", methods=['POST','GET'])
 def callback():
     if request.method == 'POST':
-        # リクエストヘッダーから署名検証のための値を取得
-        signature = request.headers['X-Line-Signature']
-
-        # リクエストボディを取得
-        body = request.get_data(as_text=True)
-        LOG.info("Request body: " + body)
-
-        # 署名を検証し、問題なければhandleに定義されている関数を呼ぶ
-        try:
-            handler.handle(body, signature)
-        except InvalidSignatureError:
-            print("Invalid signature. Please check your channel access token/channel secret.")
-            abort(400)
-        return 'OK'
+        return "jjj"
     
     if request.method == 'GET':
         return "now get"

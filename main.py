@@ -16,6 +16,7 @@ handler=WebhookHandler(YOUR_CHANNEL_SECRET)
 
 @app.route("/hello")
 def hello_world():
+    print("hello")
     return "hello world!!!"
 
 @app.route("/callback", methods=['POST'])

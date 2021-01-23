@@ -23,7 +23,7 @@ def hello_world():
 def callback():
     if request.method == 'POST':
         # リクエストヘッダーから署名検証のための値を取得
-        signature = request.headers['X-Line-Signature']
+        signature = request.headers['x-Line-Signature']
 
         # リクエストボディを取得
         body = request.get_data(as_text=True)

@@ -19,7 +19,7 @@ def hello_world():
     print("hello")
     return "hello world!!!"
 
-@app.route("/callback")
+@app.route("/callback", methods=['POST'])
 def callback():
     return "calllback"
 

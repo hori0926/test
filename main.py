@@ -14,7 +14,7 @@ YOUR_CHANNEL_SECRET = "U51f48c4a84fe544502cf3f944737c16e"
 line_bot_api=LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler=WebhookHandler(YOUR_CHANNEL_SECRET)
 
-@app.route("/")
+@app.route("/hello")
 def hello_world():
     return "hello world!!!"
 
